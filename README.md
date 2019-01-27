@@ -1,1 +1,1 @@
-Future App hosted her [Here](https://universallyry.github.io/visionsdreamsideas/).
+Future App hosted [Here](https://universallyry.github.io/visionsdreamsideas/).
