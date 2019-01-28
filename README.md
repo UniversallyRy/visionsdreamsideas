@@ -1,1 +1,0 @@
-Future App hosted [Here](https://universallyry.github.io/visionsdreamsideas/).

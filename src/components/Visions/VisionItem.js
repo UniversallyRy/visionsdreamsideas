@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+
 
 export default class VisionItem extends Component {
   state = {
@@ -8,17 +9,29 @@ export default class VisionItem extends Component {
 
   render() {
     return (
-      <div
-        style={{
-          marginBottom: '10px',
-          border: '1px black solid',
-          borderRadius: '9px',
-        }}
+
+      <article 
         id={this.props.item.id}
+        className="message"
+        style=
+          {{marginBottom: '10px',
+          border: '1px black solid',
+          borderRadius: '9px',}}
       >
-        <h1>{this.props.item.title}</h1>
-        <h2>{this.props.item.text}</h2>
-      </div>
+        <div className="message-header">
+          <p>{this.props.item.title}</p>
+          <button 
+            className="delete is-medium"
+            onClick={() => this.props.handleDeleteVision(this.props.item.id)}
+            aria-label="delete"
+          >
+          </button>
+        </div>
+        <div className="message-body">
+          {this.props.item.text}
+        </div>
+      </article>
+
     )
   }
 }

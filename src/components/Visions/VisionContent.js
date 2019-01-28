@@ -10,38 +10,22 @@ class VisionContent extends Component {
     return (
         <div style={{marginTop: '50px', backgroundColor: 'brown'}} justify="center" align="center">
 
-            <VisionForm 
+            <VisionForm
+                style={{marginBottom: '20px'}} 
                 handleAddVision={this.props.handleAddVision}
             />
 
-
+            <div className=''>
             {this.props.items.map((item) => (
 
                 <VisionItem 
                     key={item.id}
                     item={item}
+                    handleDeleteVision={this.props.handleDeleteVision}
                 />
                 ))
             }
-                {/* {this.state.visions.map((item) => (
-                    <div key={item.id}>
-                        {
-                            this.state.editingVision.id === item.id ? (
-                                <VisionEdit
-                                item={this.state.editingVision}
-                                handleSaveEdit={this.props.handleSaveEdit}
-                                handleEditCancel={this.props.handleEditCancel}
-                                />)
-                            :    
-                                (<VisionItem
-                                    item={item}
-                                    handleDeleteTodo={this.props.handleDeleteTodo}
-                                    handleSelectEditTodo={this.props.handleSelectEditTodo}
-                                />)
-                        }
-                    </div>
-                ))} */}
-                
+            </div>   
         </div>
     )
   }

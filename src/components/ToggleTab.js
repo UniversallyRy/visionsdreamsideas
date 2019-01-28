@@ -3,17 +3,19 @@ import React from 'react'
 
 // Filter component to swap todos visibility state.
 const ToggleTab = () => (
-    <div style={{ margin: '10px' }}>
+    <div className='tabs is-centered is-toggle' style={{ margin: '10px' }}>
         <span>Show: </span>
-        <button active='true'>
-            Visions
-        </button>
-        <button>
-            Dreams
-        </button>
-        <button >
-            Ideas
-        </button>
+        <ul>
+            <li className='is-active'>
+                <a href='/#'>Visions</a>
+            </li>
+            <li>
+                <a href='/#'>Dreams</a>
+            </li>
+            <li>
+                <a href='/#'>Ideas</a>
+            </li>
+        </ul>   
     </div>
 )
 

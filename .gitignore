@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+# ignore css files
+src/**/*.css
+
 # production
 /build
 

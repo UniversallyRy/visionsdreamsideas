@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     // const { showSidebar } = this.state;
     return (
-      <div >
+      <div className='container'>
         <ToggleTab/>
         <VisionContainer/>
       </div>
