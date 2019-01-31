@@ -10,13 +10,13 @@ export default class VisionItem extends Component {
   render() {
     return (
 
-      <article 
-        id={this.props.item.id}
+      <section 
         className="message"
+        id={this.props.item.id}
         style=
           {{marginBottom: '10px',
           border: '1px black solid',
-          borderRadius: '9px',}}
+          borderRadius: '6px',}}
       >
         <div className="message-header">
           <p>{this.props.item.title}</p>
@@ -30,7 +30,7 @@ export default class VisionItem extends Component {
         <div className="message-body">
           {this.props.item.text}
         </div>
-      </article>
+      </section>
 
     )
   }

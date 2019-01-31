@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import VisionContainer from '../containers/VisionContainer';
-import ToggleTab from './ToggleTab';
+import Header from './Header';
+import Footer from './Footer';
 
 
 class App extends Component {
@@ -11,10 +12,13 @@ class App extends Component {
   render() {
     // const { showSidebar } = this.state;
     return (
-      <div className='container'>
-        <ToggleTab/>
-        <VisionContainer/>
-      </div>
+      <section className='hero is-primary is-bold is-fullheight'>
+        <Header />
+        <div className='hero-body'>
+          <VisionContainer />
+        </div>  
+        <Footer />
+      </section>
     );
   }
 }

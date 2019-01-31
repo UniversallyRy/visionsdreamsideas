@@ -8,7 +8,12 @@ class VisionContent extends Component {
       
   render( ) {
     return (
-        <div style={{marginTop: '50px', backgroundColor: 'redindigo'}} justify="center" align="center">
+        <div
+            className='container has-text-centered' 
+            style={{marginTop: '50px', backgroundColor: 'redindigo'}} 
+            justify="center" 
+            align="center"
+        >
 
             <VisionForm
                 style={{marginBottom: '20px'}} 
