@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <section className='hero is-primary is-bold is-fullheight'>
         <Header />
-        <div className='hero-body'>
+        <div className='hero-body is-primary'>
           <VisionContainer />
         </div>  
         <Footer />

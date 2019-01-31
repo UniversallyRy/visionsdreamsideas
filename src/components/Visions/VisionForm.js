@@ -28,24 +28,25 @@ export class VisionForm extends Component {
                 <div className='control'>
                     <input
                     type='text'
-                    className='input is-info'
+                    className='input has-text-primary is-primary'
                     value={this.state.titleVal}
                     onChange={this.handleTitleChange}
-                    placeholder='Add Visions Title Here...' 
+                    placeholder='Add Title Here...' 
                     required
                     />
                 </div>    
                 <textarea
-                    className='textarea'
+                    className='textarea has-text-primary has-background-dark is-primary'
                     rows='10'
                     placeholder='Add description here...'
                     onChange={this.handleTextChange}
                     value={this.state.text}
+                    required
                 />
             </div>
         <div>    
-            <button className='button is-dark is-large'>
-                Click here to Add Vision
+            <button disabled={true ? this.state.text == '' : false} className='button is-light is-large'>
+                Click Here To Add Vision
             </button>
         </div>
         </form>

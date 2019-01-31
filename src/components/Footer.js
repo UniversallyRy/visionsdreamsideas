@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className="hero-foot">
             <div className="content has-text-centered">
-                <p>Created by Ryan</p>
+                <p>Created by Ry</p>
             </div>
     </div>
   )

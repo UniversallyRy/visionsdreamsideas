@@ -9,7 +9,7 @@ $blue: #72d0eb;
 $purple: hsl(275,87%,45%);
 $purple-invert: findColorInvert($purple);
 // Add a serif family
-$family-serif: "Merriweather", "Georgia", serif;
+$family-serif: "Droid Sans", "Merriweather", "Georgia", serif;
 
 // 3. Set the derived variables
 // Use the new pink as the primary color
@@ -18,7 +18,7 @@ $primary-invert: $purple-invert;
 // Use the existing orange as the danger color
 $danger: $orange;
 // Use the new serif family
-$family-primary: $family-serif;
+$family-primary: $family-serif; 
 
 // 5. Add new color variables to the color map.
 @import "bulma/sass/utilities/derived-variables.sass";

@@ -11,7 +11,7 @@ export default class VisionItem extends Component {
     return (
 
       <section 
-        className="message"
+        className="message is-dark"
         id={this.props.item.id}
         style=
           {{marginBottom: '10px',

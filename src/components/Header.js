@@ -7,27 +7,27 @@ const Header = () => (
         <nav className="navbar">
         <div className="container">
             <div className="navbar-brand">
-            <a href='#0' className="navbar-item">
-                <img src="" alt="Logo/Title?"/>
-            </a>
-            <span className="navbar-burger burger" data-target="navbarMenuHeroA">
-                <span></span>
-                <span></span>
-                <span></span>
-            </span>
+                <a href='#0' className="navbar-item">
+                    <img src="" alt="VisionsDreamsIdeas"/>
+                </a>
+                <span className="navbar-burger burger" data-target="navbarMenuHeroA">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
             </div>
             <div id="navbarMenuHeroA" className="navbar-menu">
-            <div className="navbar-end">
-                <a href='#0' className="navbar-item is-active">
-                Visions
-                </a>
-                <a href='#0' className="navbar-item">
-                Dreams
-                </a>
-                <a href='#0' className="navbar-item">
-                Ideas
-                </a>
-            </div>
+                <div className="navbar-end">
+                    <a href='#0' className="navbar-item is-active">
+                    Visions
+                    </a>
+                    <a href='#0' className="navbar-item">
+                    Dreams
+                    </a>
+                    <a href='#0' className="navbar-item">
+                    Ideas
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
