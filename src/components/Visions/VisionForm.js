@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export class VisionForm extends Component {
     state = {
         titleVal: '',
-        text: ' ',
+        text: '',
     }
 
     onSubmit = (e) => {

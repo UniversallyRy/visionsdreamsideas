@@ -15,7 +15,7 @@ const initialState = {
         isOpen: false,
     },
     {
-        title: 'VISION TWO',
+        title: 'Vision TWO',
         text: 'THis is sample text for a sample vision',
         id: uuid(),
         isOpen: false,
