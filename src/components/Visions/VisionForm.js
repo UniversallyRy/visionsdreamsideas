@@ -45,7 +45,7 @@ export class VisionForm extends Component {
                 />
             </div>
         <div>    
-            <button disabled={true ? this.state.text == '' : false} className='button is-light is-large'>
+            <button disabled={true ? this.state.text === '' : false} className='button is-light is-large'>
                 Click Here To Add Vision
             </button>
         </div>
