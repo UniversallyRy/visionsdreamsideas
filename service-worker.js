@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/visionsdreamsideas/precache-manifest.42c9b8c4cd7c3221aa7f8fc764ad1a24.js"
+  "/visionsdreamsideas/precache-manifest.5fb6875a7d28de64efba3210b6e5f7f7.js"
 );
 
 workbox.clientsClaim();
