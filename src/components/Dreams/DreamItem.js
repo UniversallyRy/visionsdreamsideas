@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-export default class VisionItem extends Component {
+export default class DreamItem extends Component {
   state = {
       displayButtons: false,
   }
@@ -11,7 +11,7 @@ export default class VisionItem extends Component {
     return (
 
       <section 
-        className="message is-dark"
+        className="message is-primary"
         id={this.props.item.id}
         style=
           {{marginBottom: '10px',
@@ -22,12 +22,12 @@ export default class VisionItem extends Component {
           <p>{this.props.item.title}</p>
           <button 
             className="delete is-medium"
-            onClick={() => this.props.handleDeleteVision(this.props.item.id)}
+            onClick={() => this.props.handleDeleteDream(this.props.item.id)}
             aria-label="delete"
           >
           </button>
         </div>
-        <div className="message-body has-text-primary">
+        <div className="message-body">
           {this.props.item.text}
         </div>
       </section>

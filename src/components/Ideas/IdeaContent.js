@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import VisionItem from './VisionItem';
-import VisionForm from './VisionForm';
+import IdeaItem from './IdeaItem';
+import IdeaForm from './IdeaForm';
 
 
-class VisionContent extends Component {
+class IdeaContent extends Component {
     
       
   render( ) {
@@ -15,18 +15,18 @@ class VisionContent extends Component {
             align="center"
         >
 
-            <VisionForm
+            <IdeaForm
                 style={{marginBottom: '20px'}} 
-                handleAddVision={this.props.handleAddVision}
+                handleAddIdea={this.props.handleAddIdea}
             />
 
             <div className=''>
             {this.props.items.map((item) => (
 
-                <VisionItem 
+                <IdeaItem 
                     key={item.id}
                     item={item}
-                    handleDeleteVision={this.props.handleDeleteVision}
+                    handleDeleteIdea={this.props.handleDeleteIdea}
                 />
                 ))
             }
@@ -37,4 +37,4 @@ class VisionContent extends Component {
 }
 
 
-export default VisionContent
+export default IdeaContent

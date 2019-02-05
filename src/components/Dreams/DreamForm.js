@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export class VisionForm extends Component {
+export class DreamForm extends Component {
     state = {
         titleVal: '',
         text: '',
@@ -8,7 +8,7 @@ export class VisionForm extends Component {
 
     onSubmit = (e) => {
         e.preventDefault();
-        this.props.handleAddVision(this.state.titleVal, this.state.text);
+        this.props.handleAddDream(this.state.titleVal, this.state.text);
         this.setState({ titleVal: '', text: ''})
     }
 
@@ -28,7 +28,7 @@ export class VisionForm extends Component {
                 <div className='control'>
                     <input
                     type='text'
-                    className='input has-text-primary has-background-dark is-primary'
+                    className='input has-text-primary is-primary'
                     value={this.state.titleVal}
                     onChange={this.handleTitleChange}
                     placeholder='Add Title Here...' 
@@ -36,7 +36,7 @@ export class VisionForm extends Component {
                     />
                 </div>    
                 <textarea
-                    className='textarea has-text-primary has-background-dark is-primary'
+                    className='textarea has-text-primary is-primary'
                     rows='10'
                     placeholder='Add description here...'
                     onChange={this.handleTextChange}
@@ -45,8 +45,8 @@ export class VisionForm extends Component {
                 />
             </div>
         <div>    
-            <button disabled={true ? this.state.text === '' : false} className='button is-dark has-text-primary is-large'>
-                Click Here To Add Vision
+            <button disabled={true ? this.state.text === '' : false} className='button is-light has-text-primary is-large'>
+                Click Here To Add Dream
             </button>
         </div>
         </form>
@@ -57,4 +57,4 @@ export class VisionForm extends Component {
   }
 }
 
-export default VisionForm
+export default DreamForm

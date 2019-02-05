@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 // Filter component to swap todos visibility state.
 const Header = () => (
@@ -18,15 +18,15 @@ const Header = () => (
             </div>
             <div id="navbarMenuHeroA" className="navbar-menu">
                 <div className="navbar-end">
-                    <Link to='/Visions' className="navbar-item is-active">
+                    <NavLink to='/Visions' activeClassName='is-active'className="navbar-item">
                     Visions
-                    </Link>
-                    <Link to='/Dreams' className="navbar-item">
+                    </NavLink>
+                    <NavLink to='/Dreams' activeClassName='is-active' className="navbar-item">
                     Dreams
-                    </Link>
-                    <Link to='/Ideas' className="navbar-item">
+                    </NavLink>
+                    <NavLink to='/Ideas' activeClassName='is-active' className="navbar-item">
                     Ideas
-                    </Link>
+                    </NavLink>
                 </div>
             </div>
         </div>

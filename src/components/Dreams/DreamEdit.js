@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export class VisionForm extends Component {
+export class DreamEdit extends Component {
     state = {
         titleVal: '',
         text: '',
@@ -8,7 +8,7 @@ export class VisionForm extends Component {
 
     onSubmit = (e) => {
         e.preventDefault();
-        this.props.handleAddVision(this.state.titleVal, this.state.text);
+        this.props.handleAddDream(this.state.titleVal, this.state.text);
         this.setState({ titleVal: '', text: ''})
     }
 
@@ -28,25 +28,24 @@ export class VisionForm extends Component {
                 <div className='control'>
                     <input
                     type='text'
-                    className='input has-text-primary has-background-dark is-primary'
+                    className='input is-info'
                     value={this.state.titleVal}
                     onChange={this.handleTitleChange}
-                    placeholder='Add Title Here...' 
+                    placeholder='Add Dreams Title Here...' 
                     required
                     />
                 </div>    
                 <textarea
-                    className='textarea has-text-primary has-background-dark is-primary'
+                    className='textarea'
                     rows='10'
                     placeholder='Add description here...'
                     onChange={this.handleTextChange}
                     value={this.state.text}
-                    required
                 />
             </div>
         <div>    
-            <button disabled={true ? this.state.text === '' : false} className='button is-dark has-text-primary is-large'>
-                Click Here To Add Vision
+            <button className='button is-dark is-large'>
+                Click here to Add Dream
             </button>
         </div>
         </form>
@@ -57,4 +56,4 @@ export class VisionForm extends Component {
   }
 }
 
-export default VisionForm
+export default DreamEdit

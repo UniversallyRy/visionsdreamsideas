@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import VisionContent from '../components/Visions/VisionContent';
 import {
     addVision,
@@ -34,7 +35,9 @@ const mapDispatchToProps = {
     handleEditCancel: cancelEdit,
 };
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(VisionContainer);
+export default withRouter(
+    connect(
+        mapStateToProps,
+        mapDispatchToProps,
+    )(VisionContainer)
+);

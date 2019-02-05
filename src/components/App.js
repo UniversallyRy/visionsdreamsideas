@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import VisionContainer from '../containers/VisionContainer';
+import DreamContainer from '../containers/DreamContainer';
+import IdeaContainer from '../containers/IdeaContainer';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -17,6 +19,8 @@ class App extends Component {
           <Header />
           <div className='hero-body is-primary'>
             <Route path='/Visions' component={VisionContainer} />
+            <Route path='/Dreams' component={DreamContainer} />
+            <Route path='/Ideas' component={IdeaContainer} />
           </div>  
           <Footer />
         </section>
