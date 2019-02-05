@@ -27,5 +27,14 @@ $addColors: (
 );
 $colors: map-merge($colors, $addColors);
 
-// 6. Import the rest of Bulma
+// 6. Add custom transitions
+.modal{
+  opacity: 1;
+  transition: opacity 300ms ease-in-out
+}
+.column:hover{
+  opacity: .8;
+}
+
+// 7. Import the rest of Bulma
 @import 'bulma/bulma';

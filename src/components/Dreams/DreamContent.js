@@ -14,22 +14,19 @@ class DreamContent extends Component {
             justify="center" 
             align="center"
         >
-
             <DreamForm
                 style={{marginBottom: '20px'}} 
                 handleAddDream={this.props.handleAddDream}
             />
-
-            <div className=''>
-            {this.props.items.map((item) => (
-
-                <DreamItem 
-                    key={item.id}
-                    item={item}
-                    handleDeleteDream={this.props.handleDeleteDream}
-                />
-                ))
-            }
+            <div className='columns is-multiline'>
+                {this.props.items.map((item) => (
+                    <DreamItem 
+                        key={item.id}
+                        item={item}
+                        handleDeleteDream={this.props.handleDeleteDream}
+                    />
+                    ))
+                }
             </div>   
         </div>
     )

@@ -71,9 +71,8 @@ export const cancelDreamEdit = () => ({
 });
 
 // Ideas
-export const addIdea = (title, text) => ({
+export const addIdea = text => ({
     type: ADD_IDEA,
-    title,
     text
 });
 

@@ -28,7 +28,7 @@ export class DreamForm extends Component {
                 <div className='control'>
                     <input
                     type='text'
-                    className='input has-text-primary is-primary'
+                    className='input has-background-info has-text-primary is-primary'
                     value={this.state.titleVal}
                     onChange={this.handleTitleChange}
                     placeholder='Add Title Here...' 
@@ -36,7 +36,7 @@ export class DreamForm extends Component {
                     />
                 </div>    
                 <textarea
-                    className='textarea has-text-primary is-primary'
+                    className='textarea has-background-info has-text-primary is-primary'
                     rows='10'
                     placeholder='Add description here...'
                     onChange={this.handleTextChange}
@@ -45,7 +45,7 @@ export class DreamForm extends Component {
                 />
             </div>
         <div>    
-            <button disabled={true ? this.state.text === '' : false} className='button is-light has-text-primary is-large'>
+            <button disabled={true ? this.state.text === '' : false} className='button is-info has-text-primary is-large'>
                 Click Here To Add Dream
             </button>
         </div>

@@ -1,4 +1,5 @@
 import uuid from 'uuid';
+import moment from 'moment';
 import {
     ADD_IDEA,
     DELETE_IDEA,
@@ -9,20 +10,31 @@ import {
 
 const initialState = {
     items: [{
-        title: 'Idea One',
-        text: 'THis is sample text for a sample idea',
+        text: `Lorem ipsum dolor sit amet, sale novum diceret ex vel, mea cu dicit honestatis. 
+        Ius solet laudem eu, ea usu ludus suavitate, usu et tamquam dolorum voluptatum. 
+        Ex eum tollit atomorum signiferumque, mea dolore propriae an. Per id vidisse persecuti, 
+        id duis adipiscing mei.`,
+        time: `${moment().subtract(1, 'days').format('MMMM Do YYYY')}`,
         id: uuid(),
         isOpen: false,
     },
     {
-        title: 'Idea TWO',
-        text: 'THis is sample text for a sample idea',
+        text: `Ad vel exerci indoctum. Saperet menandri vim ut, voluptatum incorrupte nec et, 
+        quando tincidunt intellegebat est cu. Mel ei mucius aliquam prodesset. Prompta indoctum 
+        duo at, affert ridens in nam, eu fierent voluptatum adversarium mea. Modus affert dicunt
+         at cum, cu per solet copiosae. Putant epicuri sensibus pri te. 
+         Accusata perpetua pericula usu ei, illud discere gloriatur an est.`,
+        time: `${moment().subtract(2, 'days').format('MMMM Do YYYY')}`,
         id: uuid(),
         isOpen: false,
     },
     {
-        title: 'Idea 3',
-        text: 'THis is sample text for a sample idea',
+        text: `Has an tractatos expetenda efficiantur, dicta facilisi senserit vis et,
+         ut vivendum inciderint mel. Omnes dissentias voluptatibus cu mel, modo doming mea et,
+          cu veritus electram his. Electram moderatius disputationi duo ea, in vis clita melius
+           persecuti, eos ea eripuit disputationi. Quot movet deterruisset at vis, eu vis iudico
+            numquam fierent.`,
+        time: `${moment().subtract(3, 'days').format('MMMM Do YYYY')}`,    
         id: uuid(),
         isOpen: false,
     }
@@ -40,8 +52,8 @@ const ideaReducer = (state = initialState, action) => {
             {
                 const id = uuid();
                 const ideaItem = {
-                    title: action.title,
                     text: action.text,
+                    time: moment().format('MMMM Do YYYY'),
                     id,
                     isOpen: false,
                 };
@@ -77,7 +89,7 @@ const ideaReducer = (state = initialState, action) => {
             {
                 const items = state.items.map(item => {
                     if (item.id === action.modifiedIdea.id) {
-                        item.title = action.modifiedIdea.title;
+                        item.text = action.modifiedIdea.text;
                     }
 
                     return item;

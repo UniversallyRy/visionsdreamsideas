@@ -2,18 +2,13 @@ import React, { Component } from 'react'
 
 export class IdeaEdit extends Component {
     state = {
-        titleVal: '',
         text: '',
     }
 
     onSubmit = (e) => {
         e.preventDefault();
-        this.props.handleAddIdea(this.state.titleVal, this.state.text);
-        this.setState({ titleVal: '', text: ''})
-    }
-
-    handleTitleChange = (e) => {
-        this.setState({ titleVal: e.target.value })
+        this.props.handleAddIdea(this.state.text);
+        this.setState({ text: ''})
     }
 
     handleTextChange = (e) => {
@@ -25,16 +20,6 @@ export class IdeaEdit extends Component {
       <div style={{marginBottom: '50px'}}>
         <form onSubmit={this.onSubmit}>
             <div className='field'>
-                <div className='control'>
-                    <input
-                    type='text'
-                    className='input is-info'
-                    value={this.state.titleVal}
-                    onChange={this.handleTitleChange}
-                    placeholder='Add Ideas Title Here...' 
-                    required
-                    />
-                </div>    
                 <textarea
                     className='textarea'
                     rows='10'

@@ -10,27 +10,23 @@ export default class IdeaItem extends Component {
   render() {
     return (
 
-      <section 
-        className="message is-success"
+      <div 
+        className="notification is-success has-text-primary"
         id={this.props.item.id}
         style=
           {{marginBottom: '10px',
-          border: '1px black solid',
+          border: '1px purple solid',
           borderRadius: '6px',}}
       >
-        <div className="message-header">
-          <p>{this.props.item.title}</p>
+        {this.props.item.text}
+        <p style={{marginTop: '60px'}}>{this.props.item.time}</p>
           <button 
             className="delete is-medium"
             onClick={() => this.props.handleDeleteIdea(this.props.item.id)}
             aria-label="delete"
           >
           </button>
-        </div>
-        <div className="message-body has-text-primary">
-          {this.props.item.text}
-        </div>
-      </section>
+      </div>
 
     )
   }
