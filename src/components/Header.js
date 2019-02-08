@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 // Filter component to swap todos visibility state.
 const Header = () => (
   <div className="hero-head">
-        <nav className="navbar">
+    <nav className="navbar">
         <div className="container">
             <div className="navbar-brand">
                 <div className="navbar-item">
@@ -19,13 +19,13 @@ const Header = () => (
             <div id="navbarMenuHeroA" className="navbar-menu">
                 <div className="navbar-end">
                     <NavLink to='/visions' activeClassName='is-active'className="navbar-item">
-                    Visions
+                        Visions
                     </NavLink>
                     <NavLink to='/dreams' activeClassName='is-active' className="navbar-item">
-                    Dreams
+                        Dreams
                     </NavLink>
                     <NavLink to='/ideas' activeClassName='is-active' className="navbar-item">
-                    Ideas
+                        Ideas
                     </NavLink>
                 </div>
             </div>

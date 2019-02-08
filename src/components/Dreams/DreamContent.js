@@ -14,6 +14,8 @@ class DreamContent extends Component {
             justify="center" 
             align="center"
         >
+            <h1 className='title'>Dream Journal</h1>
+            <h3 className='subtitle'>Help yourself rememeber your dreams</h3>
             <DreamForm
                 style={{marginBottom: '20px'}} 
                 handleAddDream={this.props.handleAddDream}

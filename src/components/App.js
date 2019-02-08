@@ -21,7 +21,6 @@ const App = () => {
         </section>
       </Router>  
     );
-  
 }
 
-export default App;
+export default App
