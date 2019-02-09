@@ -5,10 +5,10 @@ import VisionContent from '../components/Visions/VisionContent';
 import {
     addVision,
     deleteVision,
-    editVision,
+    deleteVisionTodo,
+    editVisionTodo,
     saveEdit,
     cancelEdit,
-    deleteVisionTodo
 } from '../actions/index';
 
 class VisionContainer extends Component {
@@ -32,10 +32,10 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = {
     handleAddVision: addVision,
     handleDeleteVision: deleteVision,
-    handleSelectEditVision: editVision,
+    handleDeleteVisionTodo: deleteVisionTodo,
+    handleSelectEditVision: editVisionTodo,
     handleSaveEdit: saveEdit,
     handleEditCancel: cancelEdit,
-    handleDeleteVisionTodo: deleteVisionTodo,
 };
 
 export default withRouter(

@@ -1,9 +1,10 @@
 import {
     ADD_VISION,
     DELETE_VISION,
-    EDIT_VISION,
-    SAVE_EDITED_VISION,
-    CANCEL_EDIT_VISION,
+    DELETE_VISION_TODO,
+    EDIT_VISION_TODO,
+    SAVE_EDITED_VISION_TODO,
+    CANCEL_EDIT_VISION_TODO,
     ADD_DREAM,
     DELETE_DREAM,
     EDIT_DREAM,
@@ -14,8 +15,7 @@ import {
     EDIT_IDEA,
     SAVE_EDITED_IDEA,
     CANCEL_EDIT_IDEA,
-    DELETE_VISION_TODO,
-} from './actionTypes';
+} from '../constants/actionTypes';
 
 // Visions
 export const addVision = (title, todos) => ({
@@ -34,18 +34,18 @@ export const deleteVisionTodo = id => ({
     id
 })
 
-export const editVision = id => ({
-    type: EDIT_VISION,
+export const editVisionTodo = id => ({
+    type: EDIT_VISION_TODO,
     id
 })
 
 export const saveEdit = modifiedVision => ({
-    type: SAVE_EDITED_VISION,
+    type: SAVE_EDITED_VISION_TODO,
     modifiedVision
 })
 
 export const cancelEdit = () => ({
-    type: CANCEL_EDIT_VISION,
+    type: CANCEL_EDIT_VISION_TODO,
     payload: {},
 });
 

@@ -2,11 +2,11 @@ import uuid from 'uuid';
 import {
     ADD_VISION,
     DELETE_VISION,
-    EDIT_VISION,
-    SAVE_EDITED_VISION,
-    CANCEL_EDIT_VISION,
     DELETE_VISION_TODO,
-} from "../actions/actionTypes";
+    EDIT_VISION_TODO,
+    SAVE_EDITED_VISION_TODO,
+    CANCEL_EDIT_VISION_TODO,
+} from "../constants/actionTypes";
 
 const initialState = {
     items: [
@@ -67,22 +67,21 @@ const visionReducer = (state = initialState, action) => {
 
         case DELETE_VISION_TODO:
             {
-                const items = state.items.map((item) => {
-                    item.todos.filter(({ todo, id }) => {
-                        if(id !== action.id)
-                        return todo;
-                    });
-
-                    return item;
+                const items = state.items.map( item  => {
+                    item.todos.filter( (todo) => 
+                        todo.id !== action.id
+                    )
+                    console.log(item)
+                    return item
                 });
-
+                
                 return {
                     ...state,
                     items
-                };
+                }
             }
 
-        case EDIT_VISION:
+        case EDIT_VISION_TODO:
             {
                 const item = state.items.find(({
                     id
@@ -93,7 +92,7 @@ const visionReducer = (state = initialState, action) => {
                 };
             }
 
-        case SAVE_EDITED_VISION:
+        case SAVE_EDITED_VISION_TODO:
             {
                 const items = state.items.map(item => {
                     if (item.id === action.modifiedVision.id) {
@@ -110,7 +109,7 @@ const visionReducer = (state = initialState, action) => {
                 };
             }
 
-        case CANCEL_EDIT_VISION:
+        case CANCEL_EDIT_VISION_TODO:
             {
                 const newState = state.items.length ? {
                     ...state,

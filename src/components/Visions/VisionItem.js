@@ -9,28 +9,29 @@ export default class VisionItem extends Component {
 
 
   render() {
+    const { item, handleDeleteVision, handleDeleteVisionTodo } = this.props;
     return (
 
       <section 
         className="message is-dark"
-        id={this.props.item.id}
+        id={item.id}
         style=
           {{marginBottom: '10px',
           border: '1px black solid',
           borderRadius: '6px',}}
       >
         <div className="message-header">
-          <p>{this.props.item.title}</p>
+          <p>{item.title}</p>
           <button 
             className="delete is-medium"
-            onClick={() => this.props.handleDeleteVision(this.props.item.id)}
+            onClick={() => handleDeleteVision(item.id)}
             aria-label="delete"
           />
         </div>
         <div className="message-body has-background-dark has-text-primary">
           <VisionTodos
-          handleDeleteVisionTodo={this.props.handleDeleteVisionTodo}
-          todos={this.props.item.todos}
+          handleDeleteVisionTodo={handleDeleteVisionTodo}
+          todos={item.todos}
           />
         </div>
       </section>

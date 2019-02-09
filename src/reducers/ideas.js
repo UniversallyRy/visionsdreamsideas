@@ -6,7 +6,7 @@ import {
     EDIT_IDEA,
     SAVE_EDITED_IDEA,
     CANCEL_EDIT_IDEA,
-} from "../actions/actionTypes";
+} from "../constants/actionTypes";
 
 const initialState = {
     items: [{

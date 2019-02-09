@@ -6,7 +6,7 @@ import {
     EDIT_DREAM,
     SAVE_EDITED_DREAM,
     CANCEL_EDIT_DREAM,
-} from "../actions/actionTypes";
+} from "../constants/actionTypes";
 
 const initialState = {
     items: [{

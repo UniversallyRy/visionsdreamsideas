@@ -7,6 +7,7 @@ class VisionContent extends Component {
     
       
   render( ) {
+     const { items, handleAddVision, handleDeleteVision, handleDeleteVisionTodo } = this.props;
     return (
         <div
             className='container has-text-centered' 
@@ -18,15 +19,15 @@ class VisionContent extends Component {
             <h6 className='subtitle is-6'>What do you see for your future and the steps you need to take to achieve your goals?</h6>
             <VisionForm
                 style={{marginBottom: '20px'}} 
-                handleAddVision={this.props.handleAddVision}
+                handleAddVision={handleAddVision}
             />
             <div className='visionsList'>
-            {this.props.items.map((item) => (
+            {items.map((item) => (
                 <VisionItem 
                     key={item.id}
                     item={item}
-                    handleDeleteVision={this.props.handleDeleteVision}
-                    handleDeleteVisionTodo={this.props.handleDeleteVisionTodo}
+                    handleDeleteVision={handleDeleteVision}
+                    handleDeleteVisionTodo={handleDeleteVisionTodo}
                 />
             ))}
             </div>   
