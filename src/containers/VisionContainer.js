@@ -8,11 +8,13 @@ import {
     editVision,
     saveEdit,
     cancelEdit,
+    deleteVisionTodo
 } from '../actions/index';
 
 class VisionContainer extends Component {
     handleAddVision = itemValue => this.props.handleAddVision(itemValue);
     handleDeleteVision = selectedItemId => this.props.handleDeleteVision(selectedItemId);
+    handleDeleteVisionTodo = id => this.props.handleDeleteVisionTodo(id); 
     handleSelectEditVision = id => this.props.handleSelectEditVision(id);
     handleSaveEdit = modifiedItem => this.props.handleSaveEdit(modifiedItem);
     handleEditCancel = selectedItemId => this.props.handleEditCancel(selectedItemId);
@@ -33,6 +35,7 @@ const mapDispatchToProps = {
     handleSelectEditVision: editVision,
     handleSaveEdit: saveEdit,
     handleEditCancel: cancelEdit,
+    handleDeleteVisionTodo: deleteVisionTodo,
 };
 
 export default withRouter(

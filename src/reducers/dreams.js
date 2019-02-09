@@ -11,21 +11,21 @@ import {
 const initialState = {
     items: [{
         title: 'Dream One',
-        text: 'THis is sample text for a sample dream',
+        todos: 'THis is sample todos for a sample dream',
         time: `${moment().subtract(3, 'days').format('On dddd ll')}`,
         id: uuid(),
         isOpen: false,
     },
     {
         title: 'Dream TWO',
-        text: 'THis is sample text for a sample dream',
+        todos: 'THis is sample todos for a sample dream',
         time: `${moment().subtract(2, 'days').format('On dddd ll')}`,
         id: uuid(),
         isOpen: false,
     },
     {
         title: 'Dream 3',
-        text: 'THis is sample text for a sample dream',
+        todos: 'THis is sample todos for a sample dream',
         time: `${moment().subtract(1, 'days').format('On dddd ll')}`,
         id: uuid(),
         isOpen: false,
@@ -45,7 +45,7 @@ const dreamReducer = (state = initialState, action) => {
                 const id = uuid();
                 const dreamItem = {
                     title: action.title,
-                    text: action.text,
+                    todos: action.todos,
                     time: moment().format('On dddd ll'),
                     id,
                     isOpen: false,

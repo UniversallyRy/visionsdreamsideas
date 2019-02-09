@@ -14,17 +14,23 @@ import {
     EDIT_IDEA,
     SAVE_EDITED_IDEA,
     CANCEL_EDIT_IDEA,
+    DELETE_VISION_TODO,
 } from './actionTypes';
 
 // Visions
-export const addVision = (title, text) => ({
+export const addVision = (title, todos) => ({
     type: ADD_VISION,
     title,
-    text
+    todos
 });
 
 export const deleteVision = id => ({
     type: DELETE_VISION,
+    id
+})
+
+export const deleteVisionTodo = id => ({
+    type: DELETE_VISION_TODO,
     id
 })
 

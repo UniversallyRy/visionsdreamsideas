@@ -14,7 +14,7 @@ class IdeaContent extends Component {
             justify="center" 
             align="center"
         >
-            <h1 className='title'>Got some ideas you wanna remember?</h1>
+            <h1 className='title'>Ideas and Notes</h1>
             <IdeaForm
                 style={{marginBottom: '20px'}} 
                 handleAddIdea={this.props.handleAddIdea}

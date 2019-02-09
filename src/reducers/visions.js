@@ -5,27 +5,29 @@ import {
     EDIT_VISION,
     SAVE_EDITED_VISION,
     CANCEL_EDIT_VISION,
+    DELETE_VISION_TODO,
 } from "../actions/actionTypes";
 
 const initialState = {
-    items: [{
-        title: 'Vision One',
-        text: 'THis is sample text for a sample vision',
-        id: uuid(),
-        isOpen: false,
-    },
-    {
-        title: 'Vision TWO',
-        text: 'THis is sample text for a sample vision',
-        id: uuid(),
-        isOpen: false,
-    },
-    {
-        title: 'Vision 3',
-        text: 'THis is sample text for a sample vision',
-        id: uuid(),
-        isOpen: false,
-    }
+    items: [
+        {
+            title: 'Vision One',
+            todos: [{todo:'THis is sample todos for a sample vision', id: uuid()}, {todo:'this is a second todo', id: uuid()}],
+            id: uuid(),
+            isOpen: false,
+        },
+        {
+            title: 'Vision TWO',
+            todos: [{todo:'THis is sample todos for a sample vision', id: uuid()}],
+            id: uuid(),
+            isOpen: false,
+        },
+        {
+            title: 'Vision 3',
+            todos: [{todo:'THis is sample todos for a sample vision', id: uuid()}],
+            id: uuid(),
+            isOpen: false,
+        }
     ],
 };
 
@@ -39,9 +41,10 @@ const visionReducer = (state = initialState, action) => {
         case ADD_VISION:
             {
                 const id = uuid();
+                const todoId = uuid();
                 const visionItem = {
                     title: action.title,
-                    text: action.text,
+                    todos: [{todo: action.todos, id: todoId}],
                     id,
                     isOpen: false,
                 };
@@ -56,6 +59,23 @@ const visionReducer = (state = initialState, action) => {
                 const items = state.items.filter(({
                     id
                 }) => id !== action.id);
+                return {
+                    ...state,
+                    items
+                };
+            }
+
+        case DELETE_VISION_TODO:
+            {
+                const items = state.items.map((item) => {
+                    item.todos.filter(({ todo, id }) => {
+                        if(id !== action.id)
+                        return todo;
+                    });
+
+                    return item;
+                });
+
                 return {
                     ...state,
                     items

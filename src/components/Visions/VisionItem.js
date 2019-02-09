@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import VisionTodos from './VisionItemTodos';
 
 
 export default class VisionItem extends Component {
@@ -11,7 +12,7 @@ export default class VisionItem extends Component {
     return (
 
       <section 
-        className="message is-primary"
+        className="message is-dark"
         id={this.props.item.id}
         style=
           {{marginBottom: '10px',
@@ -24,11 +25,13 @@ export default class VisionItem extends Component {
             className="delete is-medium"
             onClick={() => this.props.handleDeleteVision(this.props.item.id)}
             aria-label="delete"
-          >
-          </button>
+          />
         </div>
         <div className="message-body has-background-dark has-text-primary">
-          {this.props.item.text}
+          <VisionTodos
+          handleDeleteVisionTodo={this.props.handleDeleteVisionTodo}
+          todos={this.props.item.todos}
+          />
         </div>
       </section>
 

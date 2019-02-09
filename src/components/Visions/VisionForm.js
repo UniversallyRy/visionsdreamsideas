@@ -3,13 +3,13 @@ import React, { Component } from 'react'
 export class VisionForm extends Component {
     state = {
         titleVal: '',
-        text: '',
+        todos: '',
     }
 
     onSubmit = (e) => {
         e.preventDefault();
-        this.props.handleAddVision(this.state.titleVal, this.state.text);
-        this.setState({ titleVal: '', text: ''})
+        this.props.handleAddVision(this.state.titleVal, this.state.todos);
+        this.setState({ titleVal: '', todos: ''})
     }
 
     handleTitleChange = (e) => {
@@ -17,7 +17,7 @@ export class VisionForm extends Component {
     }
 
     handleTextChange = (e) => {
-        this.setState({ text: e.target.value })
+        this.setState({ todos: e.target.value })
     }
     
   render() {
@@ -40,12 +40,12 @@ export class VisionForm extends Component {
                     rows='10'
                     placeholder='Add description here...'
                     onChange={this.handleTextChange}
-                    value={this.state.text}
+                    value={this.state.todos}
                     required
                 />
             </div>
         <div>    
-            <button disabled={true ? this.state.text === '' : false} className='button is-dark has-text-primary is-large'>
+            <button disabled={true ? this.state.todos === '' : false} className='button is-dark has-text-primary is-large'>
                 Click Here To Add Vision
             </button>
         </div>

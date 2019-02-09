@@ -1,6 +1,7 @@
 // Vision Actions
 export const ADD_VISION = "ADD_VISION";
 export const DELETE_VISION = "DELETE_VISION";
+export const DELETE_VISION_TODO = 'DELETE_VISION_TODO';
 export const EDIT_VISION = "EDIT_VISION";
 export const SAVE_EDITED_VISION = 'SAVE_EDITED_VISION';
 export const CANCEL_EDIT_VISION = 'CANCEL_EDIT_VISION';
