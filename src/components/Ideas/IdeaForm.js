@@ -21,7 +21,7 @@ export class IdeaForm extends Component {
         <form onSubmit={this.onSubmit}>
             <div className='field'>  
                 <textarea
-                    className='textarea has-text-primary has-background-success is-primary'
+                    className='textarea has-text-primary has-background-white is-primary'
                     rows='10'
                     placeholder='Jot down an idea here...'
                     onChange={this.handleTextChange}
@@ -30,7 +30,7 @@ export class IdeaForm extends Component {
                 />
             </div>
         <div>    
-            <button disabled={true ? this.state.text === '' : false} className='has-text-primary button is-success is-large'>
+            <button disabled={true ? this.state.text === '' : false} className='has-text-primary button is-white is-large'>
                 Click Here To Add Idea
             </button>
         </div>

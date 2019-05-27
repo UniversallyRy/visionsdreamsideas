@@ -11,7 +11,7 @@ export default class IdeaItem extends Component {
     return (
 
       <div 
-        className="notification is-success has-text-primary"
+        className="notification is-white has-text-primary"
         id={this.props.item.id}
         style=
           {{marginBottom: '10px',
